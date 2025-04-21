@@ -44,3 +44,5 @@ o.spelllang = "en"
 o.completeopt = "menu,menuone,noselect"
 o.shortmess:append("c")
 o.showmode = false
+
+vim.g.tex_flavor = "latex"

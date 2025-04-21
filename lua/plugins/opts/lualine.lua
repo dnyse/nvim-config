@@ -60,6 +60,7 @@ local setup = function()
 		inactive_winbar = {},
 		extensions = {},
 	})
+	-- TODO: (dhub) Clean this mess up
 	vim.cmd [[
 	hi lualine_a_normal guifg=#eaebed
 	hi lualine_b_normal guifg=#eaebed

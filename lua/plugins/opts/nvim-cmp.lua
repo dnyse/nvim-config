@@ -21,11 +21,12 @@ local setup = function()
 		},
 		sources = {
 			{ name = "nvim_lsp" },
-			{ name = "nvim_lua" },
+			{ name = "lazydev" },
 			{ name = "luasnip" },
 			{ name = "path" },
 			{ name = "latex_symbols" },
 			{ name = "buffer" },
+			{ name = "render-markdown" },
 		},
 		experimental = {
 			native_menu = false,
