@@ -1,7 +1,7 @@
 -- LSP Setup
 local lspconfig = require("lspconfig")
 
-local servers = { "clangd", "bashls", "pyright", "lua_ls", "texlab", "cmake" }
+local servers = { "clangd", "bashls", "pyright", "lua_ls", "texlab", "nil_ls", "gopls" }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 

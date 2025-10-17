@@ -100,3 +100,4 @@ end)
 map({ "n", "x" }, "<leader>sa", function()
 	require("scissors").addNewSnippet()
 end)
+

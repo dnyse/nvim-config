@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Leader
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 vim.opt.termguicolors = true
 

@@ -11,7 +11,7 @@ return {
     { "cq", "<cmd>Trouble toggle<CR>", desc = "Open trouble quickfix list" },
     { "cn", "<cmd>Trouble next<CR>", desc = "Next trouble quickfix list" },
     { "cp", "<cmd>Trouble prev<CR>", desc = "Prev trouble quickfix list" },
-    { "<leader>ll", "<cmd>Trouble loclist toggle<CR>", desc = "Open trouble location list" },
+    { "<leader>tl", "<cmd>Trouble loclist toggle<CR>", desc = "Open trouble location list" },
     { "<leader>td", "<cmd>Trouble todo toggle<CR>", desc = "Open todos in trouble" },
   },
 }
