@@ -101,3 +101,7 @@ map({ "n", "x" }, "<leader>sa", function()
 	require("scissors").addNewSnippet()
 end)
 
+-- Window resizing
+map({ "n", "t" }, "<M-.>", "<cmd>vertical resize -5<cr>", { desc = "Decrease window width" })
+map({ "n", "t" }, "<M-,>", "<cmd>vertical resize +5<cr>", { desc = "Increase window width" })
+

@@ -2,7 +2,7 @@ local setup = function()
 	local lint = require("lint")
 
 	lint.linters_by_ft = {
-		python = { "pylint" },
+		-- python = { "pylint" },
 		-- cpp = { "cppcheck" },
 		go = { "golangcilint" },
 		nix = { "nix" },

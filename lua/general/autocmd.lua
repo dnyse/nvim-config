@@ -24,11 +24,10 @@ autocmd("TextYankPost", {
 	end,
 })
 
-autocmd("FileType", {
-	pattern = { "cpp", "c", "cc" },
-	command = "setlocal ts=2 sts=2 sw=2",
-})
-
-autocmd({ "VimEnter", "VimLeave", "VimSuspend", "VimResume" }, {
-	command = "silent !tmux set status",
-})
+-- autocmd({ "VimEnter", "VimSuspend" }, {
+-- 	command = "silent !tmux set -w status off",
+-- })
+--
+-- autocmd({ "VimLeave", "VimResume" }, {
+-- 	command = "silent !tmux set -w status on",
+-- })

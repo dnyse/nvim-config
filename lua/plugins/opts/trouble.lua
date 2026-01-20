@@ -7,7 +7,7 @@ return {
   cmd = "Trouble",
   keys = {
     { "<leader>dw", "<cmd>Trouble diagnostics toggle<CR>", desc = "Open trouble workspace diagnostics" },
-    { "<leader>dd", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", desc = "Open trouble document diagnostics" },
+    { "<leader>dd", "<cmd>Trouble diagnostics toggle filter.buf=0 win.position=right<CR>", desc = "Open trouble document diagnostics" },
     { "cq", "<cmd>Trouble toggle<CR>", desc = "Open trouble quickfix list" },
     { "cn", "<cmd>Trouble next<CR>", desc = "Next trouble quickfix list" },
     { "cp", "<cmd>Trouble prev<CR>", desc = "Prev trouble quickfix list" },

@@ -61,7 +61,7 @@ local setup = function()
 		extensions = {},
 	})
 	-- TODO: (dhub) Clean this mess up
-	vim.cmd [[
+	vim.cmd([[
 	hi lualine_a_normal guifg=#eaebed
 	hi lualine_b_normal guifg=#eaebed
 	hi lualine_c_normal guifg=#eaebed
@@ -80,7 +80,7 @@ local setup = function()
 	hi lualine_a_terminal guifg=#eaebed
 	hi lualine_b_terminal guifg=#eaebed
 	hi lualine_c_terminal guifg=#eaebed
-	]]
+	]])
 end
 return {
 	"nvim-lualine/lualine.nvim",
