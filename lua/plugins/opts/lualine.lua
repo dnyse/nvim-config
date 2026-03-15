@@ -40,6 +40,7 @@ local setup = function()
 					cond = require("noice").api.statusline.mode.has,
 					color = { fg = "#bf616a" },
 				},
+				 require("opencode").statusline,
 				"encoding",
 				"fileformat",
 				"filetype",

@@ -11,23 +11,14 @@ autocmd("FileType", {
 	command = "set linebreak",
 })
 
--- autocmd("BufWritePre", {
--- 	callback = function()
--- 		vim.lsp.buf.format()
--- 	end,
--- 	pattern = { "*.js", "*.ts", "*.lua", "*.cpp", "*.h", "*.cc" }
--- })
-
 autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank()
 	end,
 })
 
--- autocmd({ "VimEnter", "VimSuspend" }, {
--- 	command = "silent !tmux set -w status off",
--- })
---
--- autocmd({ "VimLeave", "VimResume" }, {
--- 	command = "silent !tmux set -w status on",
--- })
+-- NOTE: Ensures that when exiting NeoVim, Zellij returns to normal mode
+vim.api.nvim_create_autocmd("VimLeave", {
+    pattern = "*",
+    command = "silent !zellij action switch-mode normal"
+})
