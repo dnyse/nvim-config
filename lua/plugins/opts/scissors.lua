@@ -1,7 +1,3 @@
-return {
-	"chrisgrieser/nvim-scissors",
-	dependencies = "nvim-telescope/telescope.nvim", -- optional
-	opts = {
-		snippetDir = vim.fn.stdpath("config") .. "/lua/snippets/",
-	},
-}
+require("scissors").setup({
+	snippetDir = vim.fn.stdpath("config") .. "/lua/snippets/",
+})

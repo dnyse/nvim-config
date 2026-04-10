@@ -1,3 +1,1 @@
-return {
-	"rmagatti/goto-preview",
-}
+require("goto-preview").setup({})

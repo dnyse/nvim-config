@@ -1,8 +1,2 @@
-return {
-	"mfussenegger/nvim-dap",
-	dependencies = {
-		{ "rcarriga/nvim-dap-ui" },
-		{ "theHamsta/nvim-dap-virtual-text" },
-		{ "nvim-telescope/telescope-dap.nvim" },
-	},
-}
+-- nvim-dap and its companions are installed via vim.pack.
+-- DAP adapters and configurations are set up in lua/lsp/ per language.

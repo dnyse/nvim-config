@@ -1,31 +1,23 @@
-local setup = function()
-	local conform = require("conform")
+local conform = require("conform")
 
-	conform.setup({
-		formatters_by_ft = {
-			json = { "prettier" },
-			yaml = { "prettier" },
-			markdown = { "prettier" },
-			lua = { "stylua" },
-			cpp = { "clang_format" },
-			go = { "goimports", "gofmt" },
-			python = { "black" },
-			nix = { "alejandra", "nixfmt" },
-			tex = {"latexindent"}
-		},
+conform.setup({
+	formatters_by_ft = {
+		json = { "prettier" },
+		yaml = { "prettier" },
+		markdown = { "prettier" },
+		lua = { "stylua" },
+		cpp = { "clang_format" },
+		go = { "goimports", "gofmt" },
+		python = { "black" },
+		nix = { "alejandra", "nixfmt" },
+		tex = { "latexindent" },
+	},
+})
+
+vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+	conform.format({
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 500,
 	})
-
-	vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-		conform.format({
-			lsp_fallback = true,
-			async = false,
-			timeout_ms = 500,
-		})
-	end, { desc = "Format file or range (in visual mode)" })
-end
-
-return {
-	"stevearc/conform.nvim",
-	event = { "BufReadPre", "BufNewFile" },
-	config = setup,
-}
+end, { desc = "Format file or range (in visual mode)" })

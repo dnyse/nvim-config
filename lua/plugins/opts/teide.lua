@@ -1,6 +1,2 @@
-return {
-	"serhez/teide.nvim",
-	lazy = false,
-	priority = 1000,
-	opts = {},
-}
+-- teide.nvim is installed as an alternative colorscheme.
+-- To activate: vim.cmd('colorscheme teide')

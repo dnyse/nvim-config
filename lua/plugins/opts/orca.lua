@@ -1,12 +1,4 @@
-return {
--- 	dir = "~/.source/orca.nvim",
--- 	-- dir = "~/Projects/orca.nvim",
--- 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
--- 	priority = 1000, -- make sure to load this before all the other start plugins
--- 	config = function()
--- 		require("orca").setup({
--- 			transparent_bg = true,
--- 		})
--- 		-- require("orca").load()
--- 	end,
-}
+-- orca.nvim is a local colorscheme — not managed by vim.pack.
+-- To use a local plugin, add its directory to the runtimepath manually:
+--   vim.opt.rtp:prepend("~/.source/orca.nvim")
+--   require("orca").setup({ transparent_bg = true })

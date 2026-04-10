@@ -1,0 +1,2 @@
+-- mfd.nvim is installed as an alternative colorscheme.
+-- To activate: vim.cmd('colorscheme mfd-stealth')

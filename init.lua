@@ -4,6 +4,9 @@
 -- ██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║   ██║     ██║   ██║██╔══██║
 -- ██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║██╗███████╗╚██████╔╝██║  ██║
 -- ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
-
-require("plugins")
+vim.loader.enable()
+local ok, err = pcall(require, "plugins")
+if not ok then
+	vim.notify("Plugin config error:\n" .. err, vim.log.levels.ERROR)
+end
 require("general")

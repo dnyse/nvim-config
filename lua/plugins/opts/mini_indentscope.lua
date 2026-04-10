@@ -1,8 +1,3 @@
-return {
-	"echasnovski/mini.nvim",
-	config = function()
-		require("mini.indentscope").setup({
-			symbol = "▏",
-		})
-	end,
-}
+require("mini.indentscope").setup({
+	symbol = "▏",
+})
