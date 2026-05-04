@@ -25,6 +25,7 @@ vim.api.nvim_create_autocmd("PackChanged", {
 		if name == "LuaSnip" and kind == "install" then
 			vim.fn.system({ "make", "-C", plugin_path, "install_jsregexp" })
 		end
+
 	end,
 })
 
@@ -79,11 +80,9 @@ vim.pack.add({
 	"https://github.com/rafamadriz/friendly-snippets",
 
 	-- Treesitter
-	"https://github.com/nvim-treesitter/nvim-treesitter",
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 	"https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
-	-- nvim-treesitter-refactor removed: incompatible with new nvim-treesitter API
 	"https://github.com/nvim-treesitter/nvim-treesitter-context",
-	-- playground is deprecated; removed
 
 	-- Formatting & linting
 	"https://github.com/stevearc/conform.nvim",
@@ -117,6 +116,7 @@ vim.pack.add({
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 	"https://github.com/catgoose/nvim-colorizer.lua", -- maintained fork of norcalli/nvim-colorizer.lua
 
+
 	-- Terminal
 	"https://github.com/akinsho/toggleterm.nvim",
 
@@ -130,20 +130,20 @@ vim.pack.add({
 vim.loader.reset()
 
 -- Plugin configurations (order matters for interdependencies)
-require("plugins.opts.github-theme")    -- colorscheme first
+require("plugins.opts.github-theme") -- colorscheme first
 require("plugins.opts.mini_indentscope")
-require("plugins.opts.noice")           -- before lualine (provides statusline API)
+require("plugins.opts.noice") -- before lualine (provides statusline API)
 -- require("plugins.opts.opencode")
-require("plugins.opts.claudecode")     -- before lualine; includes snacks
+require("plugins.opts.claudecode") -- before lualine; includes snacks
 require("plugins.opts.nvim-tree")
 require("plugins.opts.oil")
-require("plugins.opts.todo")            -- before trouble
-require("plugins.opts.trouble")         -- before telescope (telescope maps <c-t> to trouble)
+require("plugins.opts.todo") -- before trouble
+require("plugins.opts.trouble") -- before telescope (telescope maps <c-t> to trouble)
 require("plugins.opts.telescope")
-require("plugins.opts.lualine")         -- after noice and claudecode
+require("plugins.opts.lualine") -- after noice and claudecode
 require("plugins.opts.toggleterm")
-require("plugins.opts.nvim-autopairs")  -- before cmp
-require("plugins.opts.luasnip")         -- before cmp
+require("plugins.opts.nvim-autopairs") -- before cmp
+require("plugins.opts.luasnip") -- before cmp
 require("plugins.opts.nvim-cmp")
 require("plugins.opts.lazydev")
 require("plugins.opts.lspconfig")

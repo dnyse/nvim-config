@@ -5,11 +5,12 @@ require("github-theme").setup({
 			-- bg1 = "eaebed",
 		},
 	},
-	-- groups = {
-	--
-	-- },
+	groups = {
+		all = {
+		},
+	},
 	options = {
-		-- module_default = true, -- Default enable value for modules
+		module_default = true, -- Enable all theme modules (treesitter, etc.)
 		transparent = true, -- Disable setting bg (make neovim's background transparent)
 		styles = { -- Style to be applied to different syntax groups
 			comments = "NONE", -- Value is any valid attr-list value `:help attr-list`

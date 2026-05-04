@@ -27,6 +27,7 @@ o.softtabstop = indent
 o.expandtab = false
 o.relativenumber = true
 o.number = true
+o.signcolumn = "auto"
 o.wrap = false
 
 -- o.colorcolumn = "80"

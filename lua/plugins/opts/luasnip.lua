@@ -13,20 +13,20 @@ vim.keymap.set({ "i", "s" }, "<c-s>", function()
 	if ls.expand_or_jumpable() then
 		ls.expand_or_jump()
 	end
-end, { silent = true })
+end, { silent = true, desc = "LuaSnip expand or jump forward" })
 
--- <c-j> is my jump backwards key.
+-- <c-h> is my jump backwards key.
 -- this always moves to the previous item within the snippet
 vim.keymap.set({ "i", "s" }, "<c-h>", function()
 	if ls.jumpable(-1) then
 		ls.jump(-1)
 	end
-end, { silent = true })
+end, { silent = true, desc = "LuaSnip jump backward" })
 
--- <c-l> is selecting within a list of options.
+-- <c-e> is selecting within a list of options.
 -- This is useful for choice nodes (introduced in the forthcoming episode 2)
 vim.keymap.set("i", "<c-e>", function()
 	if ls.choice_active() then
 		ls.change_choice(1)
 	end
-end)
+end, { desc = "LuaSnip cycle choice node" })

@@ -69,3 +69,20 @@ require("telescope").setup({
 		},
 	},
 })
+
+local notes_dir = "~/University/Thesis/notes/Master-Thesis"
+
+vim.keymap.set("n", "<leader>nn", function()
+	require("telescope.builtin").find_files({
+		cwd = vim.fn.expand(notes_dir),
+		prompt_title = "Notes",
+		find_command = { "fd", "--type", "f", "--extension", "md", "--hidden", "--exclude", ".git" },
+	})
+end, { desc = "Notes: find files" })
+
+vim.keymap.set("n", "<leader>ln", function()
+	require("telescope.builtin").live_grep({
+		cwd = vim.fn.expand(notes_dir),
+		prompt_title = "Notes grep",
+	})
+end, { desc = "Notes: grep" })

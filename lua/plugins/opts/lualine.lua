@@ -18,33 +18,34 @@ require("lualine").setup({
 		},
 	},
 	sections = {
-		lualine_a = { "mode" },
+		lualine_a = { { "mode", color = { fg = "#ffffff" }  } },
 		lualine_b = {
-			"branch",
-			"diff",
+			{ "branch", color = { fg = "#ffffff" } },
+			{ "diff", color = { fg = "#ffffff" } },
 			{
 				"diagnostics",
+				color = { fg = "#ffffff" },
 				symbols = {
-					error = "x",
-					warn = "!",
+					error = "x ",
+					warn = "! ",
 					info = "󰛄 ",
 					hint = "󰌵 ",
 				},
 			},
 		},
-		lualine_c = { "filename" },
+		lualine_c = { { "filename", color = { fg = "#ffffff" } } },
 		lualine_x = {
 			{
 				require("noice").api.statusline.mode.get,
 				cond = require("noice").api.statusline.mode.has,
 				color = { fg = "#bf616a" },
 			},
-			"encoding",
-			"fileformat",
-			"filetype",
+			{ "encoding", color = { fg = "#ffffff" } },
+			{ "fileformat", color = { fg = "#ffffff" } },
+			{ "filetype", color = { fg = "#ffffff" } },
 		},
-		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_y = { { "progress", color = { fg = "#ffffff" } } },
+		lualine_z = { "location", color = { fg = "#ffffff" } },
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -59,24 +60,3 @@ require("lualine").setup({
 	inactive_winbar = {},
 	extensions = {},
 })
--- TODO: (dhub) Clean this mess up
-vim.cmd([[
-hi lualine_a_normal guifg=#eaebed
-hi lualine_b_normal guifg=#eaebed
-hi lualine_c_normal guifg=#eaebed
-hi lualine_a_insert guifg=#eaebed
-hi lualine_b_insert guifg=#eaebed
-hi lualine_c_insert guifg=#eaebed
-hi lualine_a_visual guifg=#eaebed
-hi lualine_b_visual guifg=#eaebed
-hi lualine_c_visual guifg=#eaebed
-hi lualine_a_command guifg=#eaebed
-hi lualine_b_command guifg=#eaebed
-hi lualine_c_command guifg=#eaebed
-hi lualine_a_replace guifg=#eaebed
-hi lualine_b_replace guifg=#eaebed
-hi lualine_c_replace guifg=#eaebed
-hi lualine_a_terminal guifg=#eaebed
-hi lualine_b_terminal guifg=#eaebed
-hi lualine_c_terminal guifg=#eaebed
-]])
